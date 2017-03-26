@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>XBInvokeCommand</Title>
+      <Author>imnbwd</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>xbic</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>eventName</ID>
+          <ToolTip>Tapped</ToolTip>
+          <Default>Tapped</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>command</ID>
+          <ToolTip>Command</ToolTip>
+          <Default>{Binding TestCommand}</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="xaml" Delimiter="$"><![CDATA[                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="$eventName$">
+                            <Core:InvokeCommandAction Command="$command$" />
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

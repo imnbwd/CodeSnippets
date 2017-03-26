@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>XBCallMethod</Title>
+      <Author>imnbwd</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>xbcm</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>eventName</ID>
+          <ToolTip>Tapped</ToolTip>
+          <Default>Tapped</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>method</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>PageLoaded</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="xaml" Delimiter="$"><![CDATA[                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="$eventName$">
+                            <Core:CallMethodAction MethodName="$method$" TargetObject="{Binding}" />
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

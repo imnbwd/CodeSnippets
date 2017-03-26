@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>VisualStates</Title>
+      <Author>imnbwd</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>vss</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>  
+      </Declarations>
+      <Code Language="xaml" Delimiter="$"><![CDATA[                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <!--<Setter Target="GridBackground.Background" Value="{ThemeResource ControlHighlightBrush}" />-->
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <!--<Setter Target="GridBackground.Background" Value="{ThemeResource ControlHighlightBrush}" />-->
+                                    </VisualState.Setters>
+                                    <VisualState.Storyboard>
+                                        <Storyboard>
+                                            <!--<PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />-->
+                                        </Storyboard>
+                                    </VisualState.Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>XBChangeProperty</Title>
+      <Author>imbwd</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>xbcp</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>eventName</ID>
+          <ToolTip>Event Name</ToolTip>
+          <Default>Tapped</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyName</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>IsPaneOpen</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyValue</ID>
+          <ToolTip>Property Value</ToolTip>
+          <Default>True</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>targetObject</ID>
+          <ToolTip>Target Object</ToolTip>
+          <Default>{Binding}</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="xaml" Delimiter="$"><![CDATA[                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="$eventName$">
+                            <Core:ChangePropertyAction PropertyName="$propertyName$"
+                                                       TargetObject="$targetObject$"
+                                                       Value="$propertyValue$" />
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
